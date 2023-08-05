@@ -1,0 +1,533 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="658,2592" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.Storage</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="668,2527" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="Taxonomy" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\Administrator\Documents\UiPath\PDF Scrapping Bot\RPA_dummy_sample_form_.pdf" Name="Document_Path" />
+      <Variable x:TypeArguments="x:String" Name="Document_Text" />
+      <Variable x:TypeArguments="p4:Document" Name="DOM" />
+      <Variable x:TypeArguments="p6:ClassificationResult[]" Name="Classify_Result" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="Extraction_Result" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="Validate_Result" />
+      <Variable x:TypeArguments="sd2:DataSet" Name="Data_Set" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="Excel_DT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="606,68" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[Taxonomy]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:LoadTaxonomy>
+    <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[Document_Path]" DocumentText="[Document_Text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="606,68" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+      <p:DigitizeDocument.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+          <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="BQsP/T5+VHoqSUddFS5MoMUZKiaCr5rvaimrY/dpb3SL+W9DxFQpXC2TVGLx2jXLowSsMVk7M8lt04QqsJcFoA==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" Profile="None" Scale="1" Timeout="100000">
+            <p1:UiPathDocumentOCR.Image>
+              <InArgument x:TypeArguments="sd:Image">
+                <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                  <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p1:UiPathDocumentOCR.Image>
+            <p1:UiPathDocumentOCR.PredictionId>
+              <InArgument x:TypeArguments="x:String">
+                <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                  <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
+                </DelegateArgumentValue>
+              </InArgument>
+            </p1:UiPathDocumentOCR.PredictionId>
+          </p1:UiPathDocumentOCR>
+        </ActivityFunc>
+      </p:DigitizeDocument.OCREngine>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:DigitizeDocument>
+    <p2:ClassifyDocumentScope ClassificationResults="[Classify_Result]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[Document_Path]" DocumentText="[Document_Text]" sap:VirtualizedContainerService.HintSize="606,68" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI87ff0cabfbc94a179991648ef507ebd9&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Reliant.Account.Invoices&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Reliant.Account.Invoices&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI87ff0cabfbc94a179991648ef507ebd9&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI87ff0cabfbc94a179991648ef507ebd9&quot;:[]}}">
+      <p2:ClassifyDocumentScope.Classifiers>
+        <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,114" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="C:\Users\Administrator\Documents\UiPath\PDF Scrapping Bot\DocumentProcessing\Keyword.json" PersistenceId="UI87ff0cabfbc94a179991648ef507ebd9">
+          <p2:KeywordBasedClassifier.ClassifierResult>
+            <OutArgument x:TypeArguments="p3:ClassifierResult">
+              <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+              </DelegateArgumentReference>
+            </OutArgument>
+          </p2:KeywordBasedClassifier.ClassifierResult>
+          <p2:KeywordBasedClassifier.DocumentObjectModel>
+            <InArgument x:TypeArguments="p4:Document">
+              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p2:KeywordBasedClassifier.DocumentObjectModel>
+          <p2:KeywordBasedClassifier.DocumentPath>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p2:KeywordBasedClassifier.DocumentPath>
+          <p2:KeywordBasedClassifier.DocumentText>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p2:KeywordBasedClassifier.DocumentText>
+          <p2:KeywordBasedClassifier.DocumentTypes>
+            <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+              <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p2:KeywordBasedClassifier.DocumentTypes>
+          <p2:KeywordBasedClassifier.PredictionId>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p2:KeywordBasedClassifier.PredictionId>
+        </p2:KeywordBasedClassifier>
+      </p2:ClassifyDocumentScope.Classifiers>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p2:ClassifyDocumentScope>
+    <p5:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[Document_Path]" DocumentText="[Document_Text]" DocumentTypeId="Reliant.Account.Invoices" ExtractionResult="[Extraction_Result]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="606,68" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIa47065a2b2134dcea1956a3f8ac438e9&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Reliant.Account.Invoices&quot;:{&quot;FieldMappings&quot;:{&quot;Reliant.Account.Invoices.Table_Extraction&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Reliant.Account.Invoices.Table_Extraction.Start&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Start&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Reliant.Account.Invoices.Table_Extraction.Stop&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Stop&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Reliant.Account.Invoices.Table_Extraction.Verify&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Verify&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Reliant.Account.Invoices.Table_Extraction.ESI_ID&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.ESI_ID&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIa47065a2b2134dcea1956a3f8ac438e9&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIa47065a2b2134dcea1956a3f8ac438e9&quot;:[]}}">
+      <p5:DataExtractionScope.Extractors>
+        <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="BQsP/T5+VHoqSUddFS5MoMUZKiaCr5rvaimrY/dpb3SL+W9DxFQpXC2TVGLx2jXLowSsMVk7M8lt04QqsJcFoA==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="234,162" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UIa47065a2b2134dcea1956a3f8ac438e9" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;Reliant.Account.Invoices&quot;,&quot;FormId&quot;:&quot;9bc83a3f&quot;,&quot;FormName&quot;:&quot;Invoice&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;CenterPoint&quot;,&quot;Box&quot;:[15.14,218.22,68.01,16.73]},{&quot;Text&quot;:&quot;Energy&quot;,&quot;Box&quot;:[15.14,289.55,40.74,16.73]},{&quot;Text&quot;:&quot;Service&quot;,&quot;Box&quot;:[15.14,333.49,42.65,16.73]},{&quot;Text&quot;:&quot;Area&quot;,&quot;Box&quot;:[15.14,379.46,26.84,16.73]},{&quot;Text&quot;:&quot;reliant&quot;,&quot;Box&quot;:[27.05,28.07,76.0,21.87]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Start&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Stop&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.Verify&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Reliant.Account.Invoices.Table_Extraction.ESI_ID&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[309.3875,20.3247,58.7159,1.1292]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[309.3875,79.0406,37.6384,1.1292]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[309.3875,116.679,64.7749,1.1292]},{&quot;Row&quot;:0,&quot;Column&quot;:3,&quot;Box&quot;:[309.3875,253.4539,50.6642,1.1292]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[310.5166,20.3247,58.7159,19.0]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[310.5166,79.0406,37.6384,19.0]},{&quot;Row&quot;:1,&quot;Column&quot;:2,&quot;Box&quot;:[310.5166,116.679,64.7749,19.0]},{&quot;Row&quot;:1,&quot;Column&quot;:3,&quot;Box&quot;:[310.5166,253.4539,50.6642,19.0]},{&quot;Row&quot;:2,&quot;Column&quot;:0,&quot;Box&quot;:[329.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:2,&quot;Column&quot;:1,&quot;Box&quot;:[329.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:2,&quot;Column&quot;:2,&quot;Box&quot;:[329.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:2,&quot;Column&quot;:3,&quot;Box&quot;:[329.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:3,&quot;Column&quot;:0,&quot;Box&quot;:[349.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:3,&quot;Column&quot;:1,&quot;Box&quot;:[349.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:3,&quot;Column&quot;:2,&quot;Box&quot;:[349.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:3,&quot;Column&quot;:3,&quot;Box&quot;:[349.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:4,&quot;Column&quot;:0,&quot;Box&quot;:[369.5166,20.3247,58.7159,21.0]},{&quot;Row&quot;:4,&quot;Column&quot;:1,&quot;Box&quot;:[369.5166,79.0406,37.6384,21.0]},{&quot;Row&quot;:4,&quot;Column&quot;:2,&quot;Box&quot;:[369.5166,116.679,64.7749,21.0]},{&quot;Row&quot;:4,&quot;Column&quot;:3,&quot;Box&quot;:[369.5166,253.4539,50.6642,21.0]},{&quot;Row&quot;:5,&quot;Column&quot;:0,&quot;Box&quot;:[390.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:5,&quot;Column&quot;:1,&quot;Box&quot;:[390.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:5,&quot;Column&quot;:2,&quot;Box&quot;:[390.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:5,&quot;Column&quot;:3,&quot;Box&quot;:[390.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:6,&quot;Column&quot;:0,&quot;Box&quot;:[410.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:6,&quot;Column&quot;:1,&quot;Box&quot;:[410.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:6,&quot;Column&quot;:2,&quot;Box&quot;:[410.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:6,&quot;Column&quot;:3,&quot;Box&quot;:[410.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:7,&quot;Column&quot;:0,&quot;Box&quot;:[430.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:7,&quot;Column&quot;:1,&quot;Box&quot;:[430.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:7,&quot;Column&quot;:2,&quot;Box&quot;:[430.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:7,&quot;Column&quot;:3,&quot;Box&quot;:[430.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:8,&quot;Column&quot;:0,&quot;Box&quot;:[450.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:8,&quot;Column&quot;:1,&quot;Box&quot;:[450.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:8,&quot;Column&quot;:2,&quot;Box&quot;:[450.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:8,&quot;Column&quot;:3,&quot;Box&quot;:[450.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:9,&quot;Column&quot;:0,&quot;Box&quot;:[470.5166,20.3247,58.7159,20.0]},{&quot;Row&quot;:9,&quot;Column&quot;:1,&quot;Box&quot;:[470.5166,79.0406,37.6384,20.0]},{&quot;Row&quot;:9,&quot;Column&quot;:2,&quot;Box&quot;:[470.5166,116.679,64.7749,20.0]},{&quot;Row&quot;:9,&quot;Column&quot;:3,&quot;Box&quot;:[470.5166,253.4539,50.6642,20.0]},{&quot;Row&quot;:10,&quot;Column&quot;:0,&quot;Box&quot;:[490.5166,20.3247,58.7159,16.0]},{&quot;Row&quot;:10,&quot;Column&quot;:1,&quot;Box&quot;:[490.5166,79.0406,37.6384,16.0]},{&quot;Row&quot;:10,&quot;Column&quot;:2,&quot;Box&quot;:[490.5166,116.679,64.7749,16.0]},{&quot;Row&quot;:10,&quot;Column&quot;:3,&quot;Box&quot;:[490.5166,253.4539,50.6642,16.0]},{&quot;Row&quot;:11,&quot;Column&quot;:0,&quot;Box&quot;:[506.5166,20.3247,58.7159,4.9889]},{&quot;Row&quot;:11,&quot;Column&quot;:1,&quot;Box&quot;:[506.5166,79.0406,37.6384,4.9889]},{&quot;Row&quot;:11,&quot;Column&quot;:2,&quot;Box&quot;:[506.5166,116.679,64.7749,4.9889]},{&quot;Row&quot;:11,&quot;Column&quot;:3,&quot;Box&quot;:[506.5166,253.4539,50.6642,4.9889]}]}]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+          <p5:FormExtractor.DocumentBounds>
+            <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+              <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.DocumentBounds>
+          <p5:FormExtractor.DocumentObjectModel>
+            <InArgument x:TypeArguments="p4:Document">
+              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.DocumentObjectModel>
+          <p5:FormExtractor.DocumentPath>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.DocumentPath>
+          <p5:FormExtractor.DocumentText>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.DocumentText>
+          <p5:FormExtractor.ExtractorDocumentType>
+            <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+              <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.ExtractorDocumentType>
+          <p5:FormExtractor.ExtractorResult>
+            <OutArgument x:TypeArguments="p7:ExtractorResult">
+              <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+              </DelegateArgumentReference>
+            </OutArgument>
+          </p5:FormExtractor.ExtractorResult>
+          <p5:FormExtractor.PredictionId>
+            <InArgument x:TypeArguments="x:String">
+              <DelegateArgumentValue x:TypeArguments="x:String">
+                <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+              </DelegateArgumentValue>
+            </InArgument>
+          </p5:FormExtractor.PredictionId>
+        </p5:FormExtractor>
+      </p5:DataExtractionScope.Extractors>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p5:DataExtractionScope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="606,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,477" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:PresentValidationStation AutomaticExtractionResults="[Extraction_Result]" DisplayName="Present Validation Station" DocumentObjectModel="[DOM]" DocumentPath="[Document_Path]" DocumentText="[Document_Text]" sap:VirtualizedContainerService.HintSize="388,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[Validate_Result]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <p5:ExportExtractionResults DataSet="[Data_Set]" DisplayName="Export Extraction Results" ExtractionResult="[Extraction_Result]" sap:VirtualizedContainerService.HintSize="606,68" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p5:ExportExtractionResults>
+    <ui:WriteRange AddHeaders="True" DataTable="[Data_Set.Tables(2)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="606,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="C:\Users\Administrator\Documents\UiPath\PDF Scrapping Bot\DocumentProcessing\DU_Sheet.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Excel_DT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="606,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Administrator\Documents\UiPath\PDF Scrapping Bot\DocumentProcessing\DU_Sheet.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Automation For SMEs – Stardex" sap:VirtualizedContainerService.HintSize="606,1500" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,1283" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Excel_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1168" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd2:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,982" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="Excel_Output" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Text="[CurrentRow(3).ToString]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://stardex.com.ng/automation-for-smes/" CvElementArea="287, 220, 837, 55" CvTextArea="309, 238, 82, 15" CvTextArgument="Enter ESI ID" CvType="InputBox" DesignTimeRectangle="292, 222, 827, 50" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='your-id' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='your-id' tag='INPUT' type='text' class='wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control' aaname='' /&gt;" Guid="9e0a4915-d014-4dea-a450-094959cc09d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAz8AAAA2CAYAAADpsicWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARQSURBVHhe7dw/byNFHMdhv2DaK1OmAxpEhUSFkJCuoKKhuAKJFgmJmj/3Ai65u8R27LDku/boJqONk3Mcztl9HumnnGfX43WqfLT2za6v/+0y63Xmup/V6vZcXZVZG2OMMcYYY8wRzaZV2oYpbZPOKc3Tx08bPfVmy6UxxhhjjDHGHP/UHdNGUB8/dfRksggAAPCcpWvqzkn3zOoFAACAMal7p4+f3BZyxwcAABibdE75GNws/8jn4wAAAMaofB9oln8sFqvtMgAAwLikd9I9s8Vi3c3n4gcAABin9E665yZ+Vt3lpfgBAADGKb2T7pmlgi4vr7bLAAAA45LeSff08XNxIX4AAIBxSu/08ZNbQOIHAAAYq/ROuucmfq7EDwAAMFqb+LnaxM/798vtMgAAwLikd8QPAAAweuIHAACYBPEDAABMgvgBAAAmQfwAAACTIH4AAIBJED8AAMAkPFn8zOeL7suvv+k+e3EyOCenn3dvzs63Z++W8/765/X20eNlv7z+0HVlct25/rvO/fa7H/pjRR63a7X6+K7fy08/v+rPAQAADu/J4+exf9CX+Pjt9z+2K4/30D3//Pt19+Lk9NZ55X3VgbRP/LS/l3JNu/YBAAD2J352yLXXkVMkivL8/IxDxE8MxRYAAHAYnzx+Ski8+uXX/g//8hGwBECJlLLWBkRZzzk5N7Lf6Rdfdd+//LE/NhQvHxM/9d53OVT8xH17AQAA+zmK+En01JFSR0cbKuVxvW99ftlvV0C0e96lnFcia99gqY/f93vJ+lCwAQAAj/Pk8VPCoZ3yx//QR73K3aD8bEMlP9s4qINiaL9WGzXttM/NvrvOET8AAHD8juLOTwmdYlf8DIVImRwb2q/10Ds/Q8pzE1jlNcQPAAAcv2cXP4mIXXEwtF/rMfET5fnlvR0yfnLefb8zAADg4z3LOz95nPUhQ/u1HhI/beDU2vd2qPh5yLUDAAD7Ofr4afcpUVLHRs4r3/MZ2q/1kPiJvGY+Tteel8d5fgmwQ8TP0PsCAAAO58njp/1eTpnynZmhWGnXSoRkv+xbQqHerwTK0H6toefXk2MlbLJPrrU+Xq6j2Cd+6v3K3BeKAADA/p4sfgAAAI6J+AEAACZB/AAAAJMgfgAAgEkQPwAAwCSIHwAAYBLEDwAAMAniBwAAmATxAwAATIL4AQAAJkH8AAAAkyB+AACASRA/AADAJIgfAABgEsQPAAAwCbfi5+LiarsMAAAwLumdbfysxA8AADBam/hZdbP5fBM/6/X19hAAAMA4pHPSO+mePn5yCygDAAAwJqV1+vhZLBI/m7s/WVyt3AECAACet3RN+qZ85C3dcxM/676CyoH8Twjv3i27t28X3fl5Zt6dnX2YN2+MMcYYY4wx5tNP3SnplvRLOiY9k64pN3jSO+me2XK57ivorgD6EEFDU17EGGOMMcYYY/6PGeqSTbfcHT6rbrlcd/8B5Zuc+uIviDIAAAAASUVORK5CYII=" InformativeScreenshot="134dbc038f73d26c05cc7fb2fbbf3210.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <If Condition="[CurrentRow(0).ToString=&quot;Yes&quot;]" DisplayName="If- Start" sap:VirtualizedContainerService.HintSize="410,427" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'START'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://stardex.com.ng/automation-for-smes/" DesignTimeRectangle="344, 245, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='' aaname='' /&gt;" Guid="0d113cb4-749f-482b-baa0-41cee8e473cc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/hPBUBdQ54/f/5/2rRp/8vKyghikDqQehiAGwKSOHbsGJSHH4DUgdTDANwQkA2kAGT1o4ZAwKghmACrIVRJsVTJO5QAKhjy/z8A2VE4SQZFK6QAAAAASUVORK5CYII=" InformativeScreenshot="b9e85526c51ab5886142fc1c2c851f2d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target CvTextArgument="START" CvType="Text" DesignTimeRectangle="295, 245, 46, 14" ElementType="Text" FriendlyName="'START'" FullSelectorArgument="&lt;webctrl aaname='START' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='START' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' type='' class='wpcf7-list-item-label' check:innerText='START' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAZCAYAAABkdu2NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMoSURBVFhH7Zb5TxNBFMf9+4zReKCJEpEfNNFIiAdFxAtCCFJQClhAsALhUIggiBwGOQIURMAGOSoCVaFUioBAgXKUr/tmd3Db3baQ9Jc2/Sab7ryZtzOfN2/e9AhCXGHAYFcYMNgVsoA2mw16vT50AQnOaDT6B5yZX4ShvgOZZe/R0DWEFceG1AOMTs+ifWBM9bHM2aVRonZ2XRgyWzAwNi2870pWUbxP7t8/OgXHhlMaAawK83Z9MbuN4U/v8Hc4t7alkaI0Gg379QlY2zGAk3FPcTurHNrSBkQ9ysf5xFyMW6ysn4AJ/HHJO2a/nl7M2vTQpHJZF5Zw8WEeIuJ1MP+Yk6yi1je32BzcP624HpeS8nFak4XOwXE2Zm5hGTmvW1h/fE4lTgnrSjXUsfbzmo9YW99k47j8Ai6vreNKahHKmrqxtyfaaPditCVIefGWRZ2LL7CiuUeyKNXSN8yCQJCG+k7JKkrNn+Ysqmtna6C1yNVt+saC/efvmmRRyi8gOdNHeAR9yR/g1vYOEvVV0FU2o7ypB7EZpW7p582fQNR2PCCAfNJraS8xOfN7fxfV5A9wanYeF+4/w2fh/Mnfubz5N/aY2I5TessVEEAS5X2crgLHbmhx7m4OnpQ3YtpqV8D6AyR7jLYYq8I5oWKQkPuK7Sb/DvenM8ULR2FtGzuDFc1GxXwBA+SiBfSNTLLDffxmBqpb+6QeUb4AKRUpJeXnrq5zEJdTCrG44mBt7h9xR4coYceosEUnFzAQl0uZOgEH5KJIUuT5bnD5AhyZmmELJ0C+OzSOqmCXyczGePq39A7jbEI2u4bUFBBASsWraQZFkaFFeFY2X4DZQmmPFM4cXTP8CqEnOqlgvxp7+lMa38urZhlDfZ4KCCCfhFJl4pcNuy4Xu/+onVv1we1ceAOkFKRUfNPWL1n+q/XTV0Q+0MNqX1L1N038xJn4LLabnjoI4IH+ySwKH0guqmFF5mhsOk7cymRwG073qHoDpHNLFZMqp6fsy6vsMid4NX8KIM1FAaViJ9dBAA/1X5Qmc2w6FdUsGHSoIhOMCgMGu8KAwa4QBwT+AcdVyD0ggGcHAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                                <uix:TargetAnchorable.PointOffset>
+                                  <uix:PointOffset X="2" Y="-1" />
+                                </uix:TargetAnchorable.PointOffset>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
+                      </If.Else>
+                    </If>
+                    <If Condition="[CurrentRow(1).ToString=&quot;Yes&quot;]" DisplayName="If- Stop" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'STOP'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://stardex.com.ng/automation-for-smes/" CvType="CheckBox" DesignTimeRectangle="403, 553, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl idx='2' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' tag='INPUT' type='checkbox' aaname='' /&gt;" Guid="46ba4bf1-f8b1-48b0-809c-84d82a46ed51" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/hPBUBdQ54/f/5/2rRp/8vKyghikDqQehiAGwKSOHbsGJSHH4DUgdTDANwQkA2kAGT1o4ZAwKghmACrIVRJsVTJO5QAKhjy/z8A2VE4SQZFK6QAAAAASUVORK5CYII=" InformativeScreenshot="6ebc406462f6e86c8e7970ce31e2a849.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArgument="STOP" CvType="Text" DesignTimeRectangle="357, 550, 45, 21" ElementType="Text" FriendlyName="'STOP'" FullSelectorArgument="&lt;webctrl aaname='STOP' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='STOP' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' type='' class='wpcf7-list-item-label' check:innerText='STOP' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAZCAYAAACYY8ZHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMFSURBVFhH7Zb5TxNBFMf5+zTxiJKoMaKG6C8aCWIhYFCUEAMCBbFUriCWBgQibZDDYAHBolxBAojKIeFoQA6BQluOPvf7uiOl7G4J+kMh/SSTdKezb99n9s3MRtAxICwRKoQlQoUIg8FADodDvjx6IPcIu91OEDmqIHcuJ51Oxx1KOF1uqmvvo0zTWyqxttKkY4G8Xt9/E7Pz1NIzrNiGxqd9g2R2drw08nOWY+jNDdTUOUArzg35Xx9b2zvUNzKxJ07X0Bg5N9zyiP0gd02J0ak5inqQT9cfFVBGWR3FZpvoVOxTqnjXySKdAz9YDu1aygtu4hriAojfznhJZ+9lU7KximNFpxbSOZ2eqt9/ZkGw7vJQnL6cbqWXcownpVa6mmLkcW29X3lMIEElciubOHExE0i8yNJCVySxmV9L3CfAA9ECcSwsU/TjQkorsfBbFSBWe/8IRSbk8KQAIWFu/MjXAONMDR10I62IltfW5d5dgkogKTxclI8WahIl1jZ+C4GlI6ixdf2dFCUJ0NH/jSLjc7gcAwkqgWC4GfW7tb0t9yqjJLG67pIESulVfbvcs5+Z+SW6nGzg0lSTgCjKan55Ve7ZJaiE27NJBW9sXMun72ZSQl4Fz4qSkJLEwu81inpoVK1nIMYgcSGBt49FjXWVWlzLa8LcaFesiKASAiQ9Pj3HawRCic8r+YH+aElY2nrlnv34jxESYmGjGWuauYzUSvrAEv58GhzlEvvyfVLu8aEk4dncoiTDa55NbJ9KDI5N0cWkPI6nVk5aaEq4pFLCa80qr9+TAGblQuIz6h4el3t8KEkA7ECXpCQDzw2AXU+Xa6b7+VVcuoeW0Dqxa1t76ExcFlk/9HJJLa44WexmWjEtSb/9UZPAffnVzbyVIg7uwwT1SzOPXQvbL7ZhcBgJPrG1vp2QAPbw8/F6OnEnnU7GZFBMZhkfXoGoSQAcZrbuIT40EQcNGwUOvUVpTQgOI8HfTvLvoGy4PSz1ryAGYv1PDiwRyoQlQoWwRKhwDCSI/gBuuiIt2up+WAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                                <uix:TargetAnchorable.PointOffset>
+                                  <uix:PointOffset X="-2" />
+                                </uix:TargetAnchorable.PointOffset>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11" />
+                      </If.Else>
+                    </If>
+                    <If Condition="[CurrentRow(2).ToString=&quot;Yes&quot;]" DisplayName="If- Start" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'VERIFY'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://stardex.com.ng/automation-for-smes/" CvType="CheckBox" DesignTimeRectangle="471, 553, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl idx='3' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl class='' tag='INPUT' type='checkbox' aaname='' /&gt;" Guid="9ef84904-7170-4908-96c8-b0b1be7be7e3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/hPBUBdQ54/f/5/2rRp/8vKyghikDqQehiAGwKSOHbsGJSHH4DUgdTDANwQkA2kAGT1o4ZAwKghmACrIVRJsVTJO5QAKhjy/z8A2VE4SQZFK6QAAAAASUVORK5CYII=" InformativeScreenshot="6e7c8fab42fe95482ca85b5a03bdbb12.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvTextArgument="VERIFY" CvType="Text" DesignTimeRectangle="416, 550, 55, 21" ElementType="Text" FriendlyName="'VERIFY'" FullSelectorArgument="&lt;webctrl aaname='VERIFY' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='VERIFY' parentname='mghgbnmuhxbtrwogrzohaaecwaojwridhwrq' tag='SPAN' type='' class='wpcf7-list-item-label' check:innerText='VERIFY' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAZCAYAAACPQVaOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMUSURBVFhH7Zb5TxNREMf5+9SYaEKMiCEmHj+oQY1WBU8kREEiIK0HR4AgCAYDGAJVIyJYEEERgRQREAsUKi33TRn3O9kp3bLYlgR/WPpJXrLvnu/MvPc2inYREbFGJSLWqERZLBZyOp1q1ZhAH3RG2Ww2/jAy0AednMYmk4kbBa93nTp+DFH3wLDaomV1bY3aegaod2hU+fbSF/sg1bf1aAra0OeanNnUNzjq4j2EpeUVau7s47FAb47Mw57YGzb4MzO3QI1f7eQYc6stG4g+XbGg4l0rnUjOIff0nNqyQf/wOB25bqaWrp80v7hMFzOe0ZnUAkovrvGVUquNlldWqamjlw5eekAp+VXcbsoqoQNKPcFcRnMLS7zexNQsxd16zGNB4BwpcAiCcCjhIbV29/NYoaTu45b2BhULQYcTs6mxw662bJBf3UDx94vYWBGLzfSA4RACQYJj3E2xNyxU1dDOdT2xgXMEZEtyXiUl5b70RXfMPUXH7+RQ5fs2rgcSVKwsioJvAQIhFILBdsTKnLsF1VwPRyyw/xplZyHKAFl4KiWPPDpRBUHFgrefvlPczUc08sejthB9Vs4LUhiRB9sROzU7T6eVtBeHhSt2XTnumaV1HAiXZ5pOpuSStblT7d1MSGKR/zgHkm6ySaKlnM8jELHRVzLZMVLgFADDccaqP7TzJWNt6aSzaYWcds6JSR6jJ3bf+TSOnqxnfvGG+4QBxdnHkp7Q7acVvN60ckFtRUhiQVaZla5mP+cbE+LhRURcELG5VfVstBRxhr/hMdfMtP9COmWU1Gqipif2qDK+7/eYb73Z+UXuE+D47PLXtPdcmsYePUIW29XvYEOQtlgU3pQnAoSTxvA+onCv8JXm6dATK3P+RajjQhYrYopqGvmMII3hVSHcM4snI/pypuaW/29iQ/mDwm2HFMRT9E29AYWt0hiXEJwSaBAiimfD/5yhbyfF+v6g8BHs33jE5aFY5QaWt9UfEbsnPlVT0IY+PYNwucQojiuubWKH7LRY37+xWt8VRMQalYhYoxIRa0yI/gI3fc33tCbKqgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13" />
+                      </If.Else>
+                    </If>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56c3ea3e-3d19-45a0-97ba-0511adbfba6a" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://stardex.com.ng/automation-for-smes/" CvElementArea="288, 463, 136, 56" CvTextArea="343, 483, 55, 16" CvTextArgument="Submit" CvType="Button" DesignTimeRectangle="292, 466, 129, 52" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='default-btn' aaname='Submit' check:innerText='Submit' /&gt;" Guid="966262f7-1586-407b-a29e-dceb1014b2c6" ImageBase64="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" InformativeScreenshot="3efa50978030ded4964c57537ef28939.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Excel_Output]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\PDF Scrapping Bot\DocumentProcessing\DU_Sheet.xlsx</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Please Find the attached  PDF Scrapping Bot" DisplayName="Send SMTP Mail Message" Email="tejurpa10@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="bdahivdjanlkurdw" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="PDF Scrapping Bot" To="starschallenge@stardex.com.ng">
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[Excel_Output]</InArgument>
+                        </scg:List>
+                      </ui:SendMail.Files>
+                    </ui:SendMail>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="5a9ad256644d8205e22c01f974e0e5be.jpg" Selector="&lt;html app='chrome.exe' title='Automation For SMEs – Stardex' /&gt;" Title="Automation For SMEs – Stardex" Url="https://stardex.com.ng/automation-for-smes/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
